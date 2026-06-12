@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useLenis } from "lenis/react";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import { photos } from "@/lib/data";
-import { SectionHeading } from "@/components/reveal";
+import { ease, SectionHeading } from "@/components/reveal";
 
 export function Photography() {
   const [active, setActive] = useState<number | null>(null);
@@ -60,7 +60,7 @@ export function Photography() {
               initial={{ opacity: 0, y: 32, scale: 0.97 }}
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true, margin: "-40px" }}
-              transition={{ duration: 0.8, delay: (i % 3) * 0.08, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.8, delay: (i % 3) * 0.08, ease }}
               className="group relative block w-full cursor-zoom-in overflow-hidden rounded-2xl bg-surface-2 break-inside-avoid"
               aria-label={`Agrandir : ${photo.alt}`}
             >
@@ -71,7 +71,7 @@ export function Photography() {
                 height={photo.height}
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 className="h-auto w-full transition-transform duration-700 ease-out group-hover:scale-[1.04]"
-                loading={i < 3 ? "eager" : "lazy"}
+                loading="lazy"
               />
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
               <div className="pointer-events-none absolute bottom-4 left-4 translate-y-2 text-xs font-medium tracking-wide text-white opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
@@ -131,7 +131,7 @@ export function Photography() {
               initial={{ opacity: 0, scale: 0.94 }}
               animate={{ opacity: 1, scale: zoomed ? 1.4 : 1 }}
               exit={{ opacity: 0, scale: 0.96 }}
-              transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.45, ease }}
               className={zoomed ? "cursor-zoom-out" : "cursor-zoom-in"}
               onClick={(e) => {
                 e.stopPropagation();

@@ -5,6 +5,7 @@ import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-
 import { useLenis } from "lenis/react";
 import { Menu, X } from "lucide-react";
 import { navLinks } from "@/lib/data";
+import { ease } from "@/components/reveal";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { cn } from "@/lib/utils";
 
@@ -25,7 +26,7 @@ export function Navbar() {
     <motion.header
       initial={{ y: -64, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+      transition={{ duration: 0.9, ease }}
       className="fixed inset-x-0 top-0 z-50"
     >
       <div

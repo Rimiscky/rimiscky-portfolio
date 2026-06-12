@@ -14,7 +14,12 @@ export function ThemeToggle() {
     <button
       type="button"
       aria-label="Changer de thème"
-      onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
+      onClick={() => {
+        // Avant l'hydratation, resolvedTheme est undefined : on ignore le clic
+        // plutôt que de forcer "dark" quel que soit le thème courant.
+        if (!mounted) return;
+        setTheme(resolvedTheme === "dark" ? "light" : "dark");
+      }}
       className="flex h-9 w-9 items-center justify-center rounded-full border border-line bg-surface/60 text-muted transition-all duration-300 hover:scale-105 hover:text-foreground"
     >
       {mounted && resolvedTheme === "dark" ? (

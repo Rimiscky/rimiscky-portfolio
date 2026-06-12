@@ -5,9 +5,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useLenis } from "lenis/react";
 import { ArrowDown, ArrowRight } from "lucide-react";
 import { site } from "@/lib/data";
-import { TextReveal } from "@/components/reveal";
-
-const ease = [0.22, 1, 0.36, 1] as const;
+import { ease, TextReveal } from "@/components/reveal";
 
 export function Hero() {
   const ref = useRef<HTMLElement>(null);

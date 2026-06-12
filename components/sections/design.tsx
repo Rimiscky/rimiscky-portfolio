@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { designItems, type DesignItem } from "@/lib/data";
-import { SectionHeading } from "@/components/reveal";
+import { ease, SectionHeading } from "@/components/reveal";
 import { cn } from "@/lib/utils";
 
 const spanClasses: Record<DesignItem["span"], string> = {
@@ -30,7 +30,7 @@ export function Design() {
               initial={{ opacity: 0, scale: 0.95, y: 24 }}
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
               viewport={{ once: true, margin: "-40px" }}
-              transition={{ duration: 0.7, delay: (i % 4) * 0.07, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.7, delay: (i % 4) * 0.07, ease }}
               className={cn(
                 "group relative overflow-hidden rounded-2xl border border-line bg-surface-2",
                 spanClasses[item.span]
@@ -40,7 +40,7 @@ export function Design() {
                 src={item.src}
                 alt={item.alt}
                 fill
-                sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                sizes="(max-width: 1024px) 50vw, 25vw"
                 className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.05]"
               />
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />

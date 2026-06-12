@@ -5,7 +5,7 @@ import Image from "next/image";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { Check } from "lucide-react";
 import { equipment } from "@/lib/data";
-import { Reveal, SectionHeading } from "@/components/reveal";
+import { ease, Reveal, SectionHeading } from "@/components/reveal";
 import { cn } from "@/lib/utils";
 
 function TiltCard({
@@ -60,7 +60,7 @@ function TiltCard({
           <motion.div
             style={{ translateZ: 40 }}
             animate={{ scale: hovering ? 1.08 : 1 }}
-            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.6, ease }}
             className="relative h-44 w-[78%] overflow-hidden rounded-[2rem] border border-line bg-white shadow-xl sm:h-48"
           >
             <Image

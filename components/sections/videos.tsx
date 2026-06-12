@@ -5,26 +5,44 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { Pause, Play } from "lucide-react";
 import { videoClips, videoProjects } from "@/lib/data";
-import { Reveal, SectionHeading } from "@/components/reveal";
+import { ease, Reveal, SectionHeading } from "@/components/reveal";
+
+/**
+ * Pilote la lecture d'un <video> dont le montage peut dépendre de `playing`
+ * (d'où le requestAnimationFrame), en re-synchronisant l'état si play() échoue
+ * (AbortError sur double-clic rapide, échec réseau avec preload="none"…).
+ */
+function useVideoPlayback() {
+  const [playing, setPlaying] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const play = () => {
+    setPlaying(true);
+    requestAnimationFrame(() => {
+      videoRef.current?.play().catch(() => setPlaying(false));
+    });
+  };
+
+  const pause = () => {
+    videoRef.current?.pause();
+    setPlaying(false);
+  };
+
+  return { videoRef, playing, play, pause };
+}
 
 function VideoCard({
   project,
 }: {
   project: (typeof videoProjects)[number];
 }) {
-  const [playing, setPlaying] = useState(false);
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  const start = () => {
-    setPlaying(true);
-    requestAnimationFrame(() => videoRef.current?.play());
-  };
+  const { videoRef, playing, play: start } = useVideoPlayback();
 
   return (
     <Reveal>
       <motion.article
         whileHover={{ y: -6 }}
-        transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 0.4, ease }}
         className="group mx-auto max-w-4xl overflow-hidden rounded-3xl border border-line bg-surface shadow-2xl shadow-black/10"
       >
         <div className="relative aspect-video overflow-hidden bg-black">
@@ -91,26 +109,14 @@ function MiniClip({
   clip: (typeof videoClips)[number];
   index: number;
 }) {
-  const [playing, setPlaying] = useState(false);
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  const toggle = () => {
-    const video = videoRef.current;
-    if (!video) return;
-    if (playing) {
-      video.pause();
-      setPlaying(false);
-    } else {
-      video.play();
-      setPlaying(true);
-    }
-  };
+  const { videoRef, playing, play, pause } = useVideoPlayback();
+  const toggle = () => (playing ? pause() : play());
 
   return (
-    <Reveal delay={index * 0.12} className={clip.width > clip.height ? "self-center" : undefined}>
+    <Reveal delay={index * 0.12}>
       <motion.figure
         whileHover={{ y: -6 }}
-        transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 0.4, ease }}
         className="group overflow-hidden rounded-3xl border border-line bg-surface shadow-xl shadow-black/10"
       >
         <button
@@ -128,7 +134,6 @@ function MiniClip({
             loop
             playsInline
             preload="none"
-            onEnded={() => setPlaying(false)}
             className="absolute inset-0 h-full w-full object-cover"
           />
           <span
@@ -171,7 +176,7 @@ export function Videos() {
           ))}
         </div>
 
-        <div className="mt-16 grid gap-6 sm:grid-cols-3">
+        <div className="mt-16 grid items-center gap-6 sm:grid-cols-3">
           {videoClips.map((clip, i) => (
             <MiniClip key={clip.src} clip={clip} index={i} />
           ))}

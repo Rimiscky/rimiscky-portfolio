@@ -29,8 +29,10 @@ export function Particles() {
     let raf = 0;
     let width = 0;
     let height = 0;
-    let accentColor = "41, 151, 255";
-    let baseColor = "120, 120, 130";
+    // Préfixes "rgba(r, g, b, " précalculés : seul l'alpha varie par frame,
+    // on évite ainsi de reconstruire la chaîne couleur à chaque particule.
+    let accentPrefix = "rgba(41, 151, 255, ";
+    let basePrefix = "rgba(120, 120, 130, ";
 
     const hexToRgb = (hex: string) => {
       const h = hex.replace("#", "").trim();
@@ -41,8 +43,10 @@ export function Particles() {
 
     const readTheme = () => {
       const styles = getComputedStyle(document.documentElement);
-      accentColor = hexToRgb(styles.getPropertyValue("--accent")) ?? accentColor;
-      baseColor = hexToRgb(styles.getPropertyValue("--foreground")) ?? baseColor;
+      const accent = hexToRgb(styles.getPropertyValue("--accent"));
+      const base = hexToRgb(styles.getPropertyValue("--foreground"));
+      if (accent) accentPrefix = `rgba(${accent}, `;
+      if (base) basePrefix = `rgba(${base}, `;
     };
 
     const build = () => {
@@ -83,7 +87,7 @@ export function Particles() {
         const shimmer = 0.65 + 0.35 * Math.sin(time * 0.001 * p.twinkle + p.phase);
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(${p.accent ? accentColor : baseColor}, ${p.alpha * shimmer})`;
+        ctx.fillStyle = (p.accent ? accentPrefix : basePrefix) + p.alpha * shimmer + ")";
         ctx.fill();
       }
       raf = requestAnimationFrame(draw);

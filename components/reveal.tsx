@@ -3,7 +3,8 @@
 import { motion, type Variants } from "framer-motion";
 import { cn } from "@/lib/utils";
 
-const ease = [0.22, 1, 0.36, 1] as const;
+/** Courbe d'easing maison, partagée par toutes les animations du site. */
+export const ease = [0.22, 1, 0.36, 1] as const;
 
 export function Reveal({
   children,
