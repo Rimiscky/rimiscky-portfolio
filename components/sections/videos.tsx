@@ -64,7 +64,7 @@ function VideoCard({
             >
               <Image
                 src={project.poster}
-                alt={`Aperçu — ${project.title}`}
+                alt={`Aperçu - ${project.title}`}
                 fill
                 sizes="(max-width: 1024px) 100vw, 896px"
                 className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
@@ -168,7 +168,7 @@ export function Videos() {
         <SectionHeading
           kicker="Vidéo"
           title="Des images en mouvement"
-          description="Films de marque, contenus réseaux sociaux et captations — pensés pour capter l'attention dès la première seconde."
+          description="Films de marque, contenus réseaux sociaux et captations - pensés pour capter l'attention dès la première seconde."
         />
         <div className="space-y-10">
           {videoProjects.map((project) => (

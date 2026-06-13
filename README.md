@@ -1,4 +1,4 @@
-# Rimiscky Sambala — Portfolio
+# Rimiscky Sambala - Portfolio
 
 Portfolio personnel premium : photographie, vidéo, design & développement web.
 
@@ -49,7 +49,7 @@ Tout le contenu (textes, expériences, compétences, photos, vidéos, équipemen
 vercel deploy --prod --yes
 ```
 
-Les dossiers sources (`Photos/`, `Graphisme/`, `videos/`) sont exclus de l'upload via `.vercelignore` — seules les versions optimisées dans `public/` sont déployées.
+Les dossiers sources (`Photos/`, `Graphisme/`, `videos/`) sont exclus de l'upload via `.vercelignore` - seules les versions optimisées dans `public/` sont déployées.
 
 ## Domaine personnalisé
 

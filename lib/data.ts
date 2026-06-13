@@ -38,7 +38,7 @@ export const experiences = [
       "Création de contenus visuels, campagnes social media et communication de marque au quotidien.",
   },
   {
-    role: "Webdesigner — Alternance",
+    role: "Webdesigner - Alternance",
     company: "Conroy Vin & Spiritueux",
     description:
       "En alternance : conception d'interfaces, identité visuelle, visuels promotionnels et expérience e-commerce pour l'univers du vin.",
@@ -107,7 +107,7 @@ export const videoProjects = [
   {
     title: "Film de marque",
     description:
-      "Réalisation, tournage et montage d'un film court pensé pour les réseaux sociaux — tourné au Sony A7 IV, stabilisé au gimbal.",
+      "Réalisation, tournage et montage d'un film court pensé pour les réseaux sociaux - tourné au Sony A7 IV, stabilisé au gimbal.",
     src: "/videos/final.mp4",
     poster: "/videos/final-poster.jpg",
     tags: ["Réalisation", "Montage", "Étalonnage"],
@@ -151,37 +151,37 @@ export type DesignItem = {
 };
 
 export const designItems: DesignItem[] = [
-  { src: "/design/cover-djakis-1.jpg", width: 1400, height: 1400, alt: "Cover d'album — Djakis Le Grand-R", category: "Direction artistique", span: "big" },
-  { src: "/design/app-accueil-1.png", width: 644, height: 1400, alt: "UI Design — écran d'accueil d'application mobile", category: "UI Design", span: "tall" },
+  { src: "/design/cover-djakis-1.jpg", width: 1400, height: 1400, alt: "Cover d'album - Djakis Le Grand-R", category: "Direction artistique", span: "big" },
+  { src: "/design/app-accueil-1.png", width: 644, height: 1400, alt: "UI Design - écran d'accueil d'application mobile", category: "UI Design", span: "tall" },
   { src: "/design/visuel-05.jpg", width: 1400, height: 1289, alt: "Visuel réseaux sociaux", category: "Réseaux sociaux", span: "square" },
   { src: "/design/visuel-01.jpg", width: 1114, height: 1400, alt: "Affiche créative", category: "Affiche", span: "square" },
-  { src: "/design/app-connexion.png", width: 644, height: 1400, alt: "UI Design — écran de connexion d'application mobile", category: "UI Design", span: "tall" },
-  { src: "/design/cover-djakis-2.jpg", width: 1400, height: 1400, alt: "Cover d'album — déclinaison", category: "Branding", span: "square" },
+  { src: "/design/app-connexion.png", width: 644, height: 1400, alt: "UI Design - écran de connexion d'application mobile", category: "UI Design", span: "tall" },
+  { src: "/design/cover-djakis-2.jpg", width: 1400, height: 1400, alt: "Cover d'album - déclinaison", category: "Branding", span: "square" },
   { src: "/design/visuel-06.jpg", width: 1261, height: 1400, alt: "Visuel de communication", category: "Réseaux sociaux", span: "square" },
   { src: "/design/visuel-02.jpg", width: 1113, height: 1400, alt: "Affiche événementielle", category: "Affiche", span: "tall" },
   { src: "/design/visuel-03.jpg", width: 1113, height: 1400, alt: "Création graphique print", category: "Print", span: "square" },
-  { src: "/design/cover-djakis-3.jpg", width: 1400, height: 1400, alt: "Cover d'album — version alternative", category: "Direction artistique", span: "square" },
-  { src: "/design/app-verification.png", width: 644, height: 1400, alt: "UI Design — écran de vérification", category: "UI Design", span: "tall" },
+  { src: "/design/cover-djakis-3.jpg", width: 1400, height: 1400, alt: "Cover d'album - version alternative", category: "Direction artistique", span: "square" },
+  { src: "/design/app-verification.png", width: 644, height: 1400, alt: "UI Design - écran de vérification", category: "UI Design", span: "tall" },
   { src: "/design/visuel-04.jpg", width: 1114, height: 1400, alt: "Visuel de marque", category: "Branding", span: "square" },
-  { src: "/design/chez-conroy-ruby-red.jpg", width: 990, height: 1400, alt: "Affiche promotionnelle Ruby Red St Peter's — réalisée en alternance chez Conroy Vins & Spiritueux", category: "Conroy — Alternance", span: "tall" },
-  { src: "/design/chez-conroy-master-class.jpg", width: 1400, height: 1084, alt: "Affiche Master Class « Tour du Monde des Whiskies » — réalisée en alternance chez Conroy Vins & Spiritueux", category: "Conroy — Alternance", span: "wide" },
-  { src: "/design/carte-visite-gaec.jpg", width: 1400, height: 1400, alt: "Carte de visite GAEC — identité visuelle et print", category: "Print", span: "square" },
-  { src: "/design/affiche-tech-1.jpg", width: 1400, height: 1397, alt: "Visuel réseaux sociaux « Consulting Business » — Tech Partners Group", category: "Réseaux sociaux", span: "square" },
-  { src: "/design/chez-conroy-st-peters.png", width: 1400, height: 1400, alt: "Visuel réseaux sociaux Ruby Red St Peter's — réalisé en alternance chez Conroy Vins & Spiritueux", category: "Conroy — Alternance", span: "big" },
+  { src: "/design/chez-conroy-ruby-red.jpg", width: 990, height: 1400, alt: "Affiche promotionnelle Ruby Red St Peter's - réalisée en alternance chez Conroy Vins & Spiritueux", category: "Conroy - Alternance", span: "tall" },
+  { src: "/design/chez-conroy-master-class.jpg", width: 1400, height: 1084, alt: "Affiche Master Class « Tour du Monde des Whiskies » - réalisée en alternance chez Conroy Vins & Spiritueux", category: "Conroy - Alternance", span: "wide" },
+  { src: "/design/carte-visite-gaec.jpg", width: 1400, height: 1400, alt: "Carte de visite GAEC - identité visuelle et print", category: "Print", span: "square" },
+  { src: "/design/affiche-tech-1.jpg", width: 1400, height: 1397, alt: "Visuel réseaux sociaux « Consulting Business » - Tech Partners Group", category: "Réseaux sociaux", span: "square" },
+  { src: "/design/chez-conroy-st-peters.png", width: 1400, height: 1400, alt: "Visuel réseaux sociaux Ruby Red St Peter's - réalisé en alternance chez Conroy Vins & Spiritueux", category: "Conroy - Alternance", span: "big" },
   { src: "/design/logo-recycle-moi.jpg", width: 1400, height: 1050, alt: "Identité visuelle et cartes de visite Recycle Moi", category: "Branding", span: "square" },
-  { src: "/design/vival-1.jpg", width: 1400, height: 990, alt: "Publicité Vival — eau minérale naturelle", category: "Publicité", span: "wide" },
+  { src: "/design/vival-1.jpg", width: 1400, height: 990, alt: "Publicité Vival - eau minérale naturelle", category: "Publicité", span: "wide" },
   { src: "/design/carte-visite-1.jpg", width: 1400, height: 1050, alt: "Cartes de visite Groupe Olie Holding", category: "Print", span: "square" },
-  { src: "/design/femme-enceinte.png", width: 1400, height: 1398, alt: "Visuel jeu concours séance photo — réseaux sociaux", category: "Réseaux sociaux", span: "square" },
-  { src: "/design/chez-conroy-whisky.jpg", width: 1400, height: 748, alt: "Bannière web Islay Single Malt — réalisée en alternance chez Conroy Vins & Spiritueux", category: "Conroy — Alternance", span: "wide" },
-  { src: "/design/logo-06.png", width: 1400, height: 1143, alt: "Logo E.A.O.A.G — association pour l'éducation des orphelins et albinos en Guinée", category: "Logo", span: "square" },
-  { src: "/design/brochure-a5.jpg", width: 1400, height: 1089, alt: "Brochure A5 services de soins infirmiers à domicile — Bien Être Pour Tous", category: "Print", span: "wide" },
+  { src: "/design/femme-enceinte.png", width: 1400, height: 1398, alt: "Visuel jeu concours séance photo - réseaux sociaux", category: "Réseaux sociaux", span: "square" },
+  { src: "/design/chez-conroy-whisky.jpg", width: 1400, height: 748, alt: "Bannière web Islay Single Malt - réalisée en alternance chez Conroy Vins & Spiritueux", category: "Conroy - Alternance", span: "wide" },
+  { src: "/design/logo-06.png", width: 1400, height: 1143, alt: "Logo E.A.O.A.G - association pour l'éducation des orphelins et albinos en Guinée", category: "Logo", span: "square" },
+  { src: "/design/brochure-a5.jpg", width: 1400, height: 1089, alt: "Brochure A5 services de soins infirmiers à domicile - Bien Être Pour Tous", category: "Print", span: "wide" },
   { src: "/design/carte-visite-odellya.jpg", width: 1400, height: 933, alt: "Carte de visite O'dellya Consulting", category: "Print", span: "square" },
-  { src: "/design/affiche-tech-2.jpg", width: 1389, height: 1400, alt: "Visuel réseaux sociaux « Sécurité Informatique » — Tech Partners Group", category: "Réseaux sociaux", span: "square" },
-  { src: "/design/groupe-1.jpg", width: 1400, height: 1298, alt: "Packaging personnalisé — sachet de chips anniversaire", category: "Packaging", span: "square" },
-  { src: "/design/chez-conroy-exclusivite.jpg", width: 1400, height: 1400, alt: "Visuel Instagram whisky exclusif — réalisé en alternance chez Conroy Vins & Spiritueux", category: "Conroy — Alternance", span: "square" },
-  { src: "/design/carte-visite-2.jpg", width: 1400, height: 1050, alt: "Cartes de visite BCI — Banque Commerciale Internationale", category: "Print", span: "square" },
+  { src: "/design/affiche-tech-2.jpg", width: 1389, height: 1400, alt: "Visuel réseaux sociaux « Sécurité Informatique » - Tech Partners Group", category: "Réseaux sociaux", span: "square" },
+  { src: "/design/groupe-1.jpg", width: 1400, height: 1298, alt: "Packaging personnalisé - sachet de chips anniversaire", category: "Packaging", span: "square" },
+  { src: "/design/chez-conroy-exclusivite.jpg", width: 1400, height: 1400, alt: "Visuel Instagram whisky exclusif - réalisé en alternance chez Conroy Vins & Spiritueux", category: "Conroy - Alternance", span: "square" },
+  { src: "/design/carte-visite-2.jpg", width: 1400, height: 1050, alt: "Cartes de visite BCI - Banque Commerciale Internationale", category: "Print", span: "square" },
   { src: "/design/logo-le-courtier.jpg", width: 1400, height: 1050, alt: "Logo et enseigne Le Courtier", category: "Logo", span: "square" },
-  { src: "/design/vival-2.jpg", width: 1400, height: 990, alt: "Publicité Vival — déclinaison de campagne", category: "Publicité", span: "wide" },
+  { src: "/design/vival-2.jpg", width: 1400, height: 990, alt: "Publicité Vival - déclinaison de campagne", category: "Publicité", span: "wide" },
   { src: "/design/brochure-gm.png", width: 1400, height: 934, alt: "Brochure et mise en page éditoriale", category: "Print", span: "wide" },
 ];
 
@@ -223,7 +223,7 @@ export const equipment = [
     description:
       "Une palette de couleurs complète au format carte de crédit. Idéale pour ajouter une touche créative ou déboucher un sujet en tournage léger.",
     specs: ["RGB + CCT 3200-6500K", "Contrôle HSI précis", "Fixation magnétique", "Recharge USB-C"],
-    why: "Elle tient dans la poche et transforme instantanément l'ambiance d'un plan — le rapport encombrement/impact est imbattable.",
+    why: "Elle tient dans la poche et transforme instantanément l'ambiance d'un plan - le rapport encombrement/impact est imbattable.",
     gradient: "from-rose-500/20 via-pink-500/10 to-transparent",
   },
   {
@@ -253,19 +253,19 @@ export const webStack = ["WordPress", "PrestaShop", "HTML", "CSS", "JavaScript",
 export const webProjects = [
   {
     title: "Conroy Vin & Spiritueux",
-    type: "E-commerce — PrestaShop",
+    type: "E-commerce - PrestaShop",
     description:
       "Conception et webdesign d'une boutique en ligne dédiée à l'univers du vin et des spiritueux, réalisés dans le cadre de mon alternance.",
   },
   {
     title: "Le 17.45",
-    type: "Site vitrine — WordPress",
+    type: "Site vitrine - WordPress",
     description:
       "Refonte de la présence digitale du restaurant : site vitrine, SEO local et contenus visuels.",
   },
   {
     title: "rimiscky.fr",
-    type: "Portfolio — Next.js",
+    type: "Portfolio - Next.js",
     description:
       "Mon portfolio personnel : Next.js, TypeScript, Tailwind CSS et animations Framer Motion.",
   },

@@ -20,7 +20,7 @@ export function Design() {
         <SectionHeading
           kicker="Design & Graphisme"
           title="Des identités qui marquent"
-          description="Covers, affiches, interfaces et contenus réseaux sociaux — du concept à la livraison."
+          description="Covers, affiches, interfaces et contenus réseaux sociaux - du concept à la livraison."
         />
 
         <div className="grid auto-rows-[160px] grid-cols-2 gap-3 sm:auto-rows-[200px] sm:gap-4 lg:grid-cols-4 lg:auto-rows-[230px]">

@@ -50,7 +50,7 @@ export function About() {
                   className="h-auto w-full transition-transform duration-700 ease-out group-hover:scale-[1.03]"
                 />
                 <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 to-transparent px-5 pt-14 pb-4 text-sm font-medium text-white">
-                  {site.name} — {site.title}
+                  {site.name} - {site.title}
                 </span>
               </div>
             </Reveal>
@@ -75,7 +75,7 @@ export function About() {
               <div className="rounded-2xl border border-line bg-gradient-to-br from-accent/10 via-surface to-surface p-6">
                 <p className="text-sm leading-relaxed text-muted">
                   <span className="font-semibold text-foreground">Formation.</span>{" "}
-                  Mastère Directeur de Projet IA (en cours) — Bachelor Chef de Projet
+                  Mastère Directeur de Projet IA (en cours) - Bachelor Chef de Projet
                   Digital. Une double culture créative et technique au service de
                   projets digitaux complets.
                 </p>

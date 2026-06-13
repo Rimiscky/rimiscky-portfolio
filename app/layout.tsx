@@ -19,8 +19,8 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `${site.name} — ${site.title}`,
-    template: `%s — ${site.name}`,
+    default: `${site.name} - ${site.title}`,
+    template: `%s - ${site.name}`,
   },
   description: site.description,
   keywords: [
@@ -40,13 +40,13 @@ export const metadata: Metadata = {
     locale: "fr_FR",
     url: site.url,
     siteName: site.name,
-    title: `${site.name} — ${site.title}`,
+    title: `${site.name} - ${site.title}`,
     description: site.description,
     images: [{ url: "/photos/photo-01.jpg", width: 1800, height: 1440, alt: site.name }],
   },
   twitter: {
     card: "summary_large_image",
-    title: `${site.name} — ${site.title}`,
+    title: `${site.name} - ${site.title}`,
     description: site.description,
     images: ["/photos/photo-01.jpg"],
   },

@@ -48,7 +48,7 @@ export function Photography() {
         <SectionHeading
           kicker="Photographie"
           title="Capturer la lumière, raconter une histoire"
-          description="Portraits, lifestyle, événementiel — une sélection de mes séries photographiques."
+          description="Portraits, lifestyle, événementiel - une sélection de mes séries photographiques."
         />
 
         <div className="columns-1 gap-4 sm:columns-2 lg:columns-3 [&>*]:mb-4">
